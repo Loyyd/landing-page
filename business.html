@@ -185,48 +185,28 @@
             </div>
         </section>
     </main>
-    <footer>
- /*  Newsletter Signup Form */
-    <section id="newsletter" class="newsletter container">
-  <div class="container-content">
-    <h2>Sign up to our Newsletter</h2>
+    <footer id="footer-layout">
+        <div class="footer-container">
+            <p class="footer-text footer-copyright">&copy; 2026 NoteWave. All rights reserved.</p>
+            <div class="footer-meta">
+                <a href="https://www.instagram.com/notewave_ac/?hl=en" target="_blank" rel="noreferrer">
+                    <img src="images/Instagram_icon.png" alt="" class="footer-social-icon">
+                    <span>Follow us on Instagram</span>
+                </a>
+            </div>
 
-    <form action="https://formspree.io/f/xdkwqnnb" method="post">
-      
-      <p>
-        <label for="contact-name">Your Name</label>
-        <input id="contact-name" type="text" name="contact-name" required>
-      </p>
-
-      <p>
-        <label for="contact-email">Your Email</label>
-        <input id="contact-email" type="email" name="contact-email" required>
-      </p>
-      <p>
-        <input type="submit" value="Sign up">
-      </p>
-
-    </form>
-  </div>
-</section>
-
-<footer id="footer-layout">
-  <table width="100%">
-    <tr>
-      <td align="center">
-        &copy; <span class="footer-text">NoteWave</span>
-        <span class="footer-separator">&middot;</span>
-        <span class="footer-text">Thank you for visiting our page.</span>
-        <span class="footer-separator">&middot;</span>
-        <a href="https://www.instagram.com/notewave_ac/?hl=en" target="_blank">
-  <span class="footer-text">Follow us on Social Media</span>
-</a>
-      </td>
-      <td align="right" valign="bottom" width="50">
-        <img src="images/notewave_logo.png" height="100" width="100" alt="NoteWave logo - AI-powered academic note-taking app for university students" class="contact-logo">
-      </td>
-    </tr>
-  </table>
+            <div class="footer-newsletter">
+                <p class="footer-kicker">Join our newsletter</p>
+                <h2></h2>
+                <form class="footer-newsletter-form" action="https://formspree.io/f/xdkwqnnb" method="post">
+                    <label class="sr-only" for="newsletter-name">Your name</label>
+                    <input id="newsletter-name" class="footer-input" type="text" name="contact-name" placeholder="Your name" required>
+                    <label class="sr-only" for="newsletter-email">Your email</label>
+                    <input id="newsletter-email" class="footer-input" type="email" name="contact-email" placeholder="Email address" required>
+                    <button type="submit" class="footer-submit">Sign up</button>
+                </form>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

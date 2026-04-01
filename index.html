@@ -66,7 +66,7 @@
             <div class="recording-layout">
                 <div class="recording-container">
                     <div class="transcription-display">
-                        <p id="transcription-text" class="placeholder-text">Your transcribed text will appear here. Press the red record button to begin...</p>
+                        <p id="transcription-text" class="placeholder-text">Press record to begin.</p>
                     </div>
                     <div class="recording-controls-wrapper">
                         <div class="recording-controls">
@@ -103,16 +103,16 @@
             <div class="summarize-layout">
                 <div class="summarize-top-row">
                     <div class="summarize-box original-text-box reveal-up">
-                        <div class="box-badge">Live Transcript</div>
+                        <div class="box-badge">Transcript</div>
                         <div class="box-content">
-                            <p>"...so the key to digital innovation isn't just about adopting new technology. It's about fundamentally changing how your business operates and delivers value. For example, if you just digitize a bad process, you have a bad digital process. Instead, you need to use AI, automation, and data analytics to rethink the customer experience from the ground up. This shift requires both cultural change and technical execution. Next week we will cover the specific frameworks for implementing these changes..."</p>
+                            <p>"Management is still investing in the company's growth. Types of capital expenditure: the two most typical forms of business investment are one, expenditures to maintain current operational levels, and two, expenditures to allow for future growth. Capital expenditure can be physical, such as machine or abstract, such as patent. Both intangible and real capital investments are generally regarded as assets since they may be sold when needed. It's crucial to remember that expenditures on maintenance or growth are treated differently from day-to-day operating costs."</p>
                         </div>
                     </div>
                     <div class="summarize-box summary-text-box reveal-up">
-                        <div class="box-badge badge-ai">NoteWave Summary</div>
+                        <div class="box-badge badge-ai">Summary</div>
                         <div class="box-content" id="summary-output">
                             <div class="placeholder-state">
-                                <p>Click "Summarize" to see NoteWave in action.</p>
+                                <p>Press Summarize</p>
                             </div>
                             <div class="loading-state hidden">
                                 <div class="skeleton-line"></div>
@@ -123,12 +123,12 @@
                                 <div class="skeleton-line w-50"></div>
                             </div>
                             <div class="result-state hidden">
-                                <h4>Lecture: Digital Innovation</h4>
+                                <h4>Lecture: Capital Expenditure</h4>
                                 <ul>
-                                    <li><strong>Core Concept:</strong> It's about fundamentally changing business operations and value delivery, not just adopting tech.</li>
-                                    <li><strong>Pitfall:</strong> Digitizing a bad process just creates a bad digital process.</li>
-                                    <li><strong>Solution:</strong> Use AI, automation, and analytics to rebuild the customer experience.</li>
-                                    <li><strong>Requirements:</strong> Needs both cultural shift and technical execution.</li>
+                                    <li><strong>Main Idea:</strong> Capital expenditure is investment aimed at maintaining operations or supporting company growth.</li>
+                                    <li><strong>Two Types:</strong> Businesses spend either to keep current activity running or to expand in the future.</li>
+                                    <li><strong>Examples:</strong> CAPEX can be physical, like machinery, or intangible, like patents.</li>
+                                    <li><strong>Why It Matters:</strong> These items are treated as assets, not ordinary day-to-day operating expenses.</li>
                                 </ul>
                             </div>
                         </div>
@@ -186,18 +186,38 @@
             </div>
         </section>
 
+        <section class="home-instagram">
+            <div class="instagram-shell">
+                <div class="instagram-header reveal-up">
+                    <span class="instagram-eyebrow">On Instagram</span>
+                    <h2>Our NoteWave Community</h2>
+                    <p>A quick look at our featured posts</p>
+                </div>
+                <div class="instagram-grid">
+                    <article class="instagram-card reveal-up">
+                        <div class="instagram-card-glow" aria-hidden="true"></div>
+                        <div class="instagram-card-frame">
+                            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DWlwg8uCJYH/?hl=en" data-instgrm-version="14" style="background:#FFFFFF; border:0; border-radius:24px; box-shadow:none; margin:0; max-width:540px; min-width:280px; width:100%;"></blockquote>
+                        </div>
+                    </article>
+                    <article class="instagram-card reveal-up">
+                        <div class="instagram-card-glow instagram-card-glow-alt" aria-hidden="true"></div>
+                        <div class="instagram-card-frame">
+                            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DWlvuWjCHxc/?hl=en" data-instgrm-version="14" style="background:#FFFFFF; border:0; border-radius:24px; box-shadow:none; margin:0; max-width:540px; min-width:280px; width:100%;"></blockquote>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section class="home-cta reveal-up">
             <div class="home-cta-header">
                 <h2>Join the Waitlist</h2>
-                <p>Get early access and be first to know when the app launches.</p>
+                <p>Be early and get Premium</p>
             </div>
             <a href="./contact.html" class="btn btn-primary">Join the Waitlist</a>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2026 NoteWave. All rights reserved.</p>
-    </footer>
 
     <script>
         // Scroll zoom logic
@@ -277,7 +297,7 @@
                 } else {
                     recognition.start();
                     recordBtn.classList.add('recording');
-                    transcriptionText.innerHTML = '<span class="interim-text">Listening... Start speaking.</span>';
+                    transcriptionText.innerHTML = '<span class="interim-text">Listening... Start speaking, or use the sample CAPEX transcript shown here.</span>';
                     transcriptionText.classList.remove('placeholder-text');
                 }
                 isRecording = !isRecording;
@@ -387,54 +407,39 @@
                         answer.classList.add('is-wrong');
                     }
 
-                    quizFeedback.textContent = isCorrect
-                        ? 'Correct. Buildings, equipment, and vehicles are examples of CAPEX.'
-                        : 'Not quite. The right answer is buildings, equipment, and vehicles.';
+                    quizFeedback.textContent = isCorrect ? 'Correct' : 'Not quite';
                     quizFeedback.className = `quiz-feedback ${isCorrect ? 'is-correct' : 'is-wrong'}`;
                 });
             });
         }
+
+        if (window.instgrm?.Embeds?.process) {
+            window.instgrm.Embeds.process();
+        }
     </script>
-     /*  Newsletter Signup Form */
-    <section id="newsletter" class="newsletter container">
-  <div class="container-content">
-    <h2>Sign up to our Newsletter</h2>
+    <script async src="https://www.instagram.com/embed.js"></script>
 
-    <form action="https://formspree.io/f/xdkwqnnb" method="post">
-      
-      <p>
-        <label for="contact-name">Your Name</label>
-        <input id="contact-name" type="text" name="contact-name" required>
-      </p>
-
-      <p>
-        <label for="contact-email">Your Email</label>
-        <input id="contact-email" type="email" name="contact-email" required>
-      </p>
-      <p>
-        <input type="submit" value="Sign up">
-      </p>
-
-    </form>
-  </div>
-</section>
-
-<footer id="footer-layout">
-  <table width="100%">
-    <tr>
-      <td align="center">
-        &copy; <span class="footer-text">NoteWave</span>
-        <span class="footer-separator">&middot;</span>
-        <span class="footer-text">Thank you for visiting our page.</span>
-        <span class="footer-separator">&middot;</span>
-        <a href="https://www.instagram.com/notewave_ac/?hl=en" target="_blank">
-  <span class="footer-text">Follow us on Social Media</span>
-</a>
-      </td>
-      <td align="right" valign="bottom" width="50">
-        <img src="images/notewave_logo.png" height="100" width="100" alt="NoteWave logo - AI-powered academic note-taking app for university students" class="contact-logo">
-      </td>
-    </tr>
-  </table>
+    <footer id="footer-layout">
+        <div class="footer-container">
+            <p class="footer-text footer-copyright">&copy; 2026 NoteWave. All rights reserved.</p>
+            <div class="footer-meta">
+                <a href="https://www.instagram.com/notewave_ac/?hl=en" target="_blank" rel="noreferrer">
+                    <img src="images/Instagram_icon.png" alt="" class="footer-social-icon">
+                    <span>Follow us on Instagram</span>
+                </a>
+            </div>
+            <div class="footer-newsletter">
+                <p class="footer-kicker">Join our newsletter</p>
+                <h2></h2>
+                <form class="footer-newsletter-form" action="https://formspree.io/f/xdkwqnnb" method="post">
+                    <label class="sr-only" for="newsletter-name">Your name</label>
+                    <input id="newsletter-name" class="footer-input" type="text" name="contact-name" placeholder="Your name" required>
+                    <label class="sr-only" for="newsletter-email">Your email</label>
+                    <input id="newsletter-email" class="footer-input" type="email" name="contact-email" placeholder="Email address" required>
+                    <button type="submit" class="footer-submit">Sign up</button>
+                </form>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
