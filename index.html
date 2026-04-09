@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ie">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -220,7 +220,6 @@
     </main>
 
     <script>
-        // Scroll zoom logic
         document.addEventListener('scroll', () => {
             const macbook = document.querySelector('.visual-macbook');
             if (macbook) {
@@ -245,19 +244,17 @@
             heroWaitlistBtn.addEventListener('blur', () => toggleHeroHover(false));
         }
 
-        // Speech Recognition Logic
         const recordBtn = document.getElementById('record-btn');
         const transcriptionText = document.getElementById('transcription-text');
         
         let recognition;
         let isRecording = false;
 
-        // Check for browser support
         if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
             const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
             recognition = new SpeechRecognition();
             recognition.continuous = true;
-            recognition.interimResults = true; // Show words as they are being spoken
+            recognition.interimResults = true;
 
             recognition.onresult = (event) => {
                 let finalTranscript = '';
@@ -271,7 +268,6 @@
                     }
                 }
                 
-                // Wrap final and interim text to style them differently
                 transcriptionText.innerHTML = '<span class="final-text">' + finalTranscript + '</span><span class="interim-text">' + interimTranscript + '</span>';
                 transcriptionText.classList.remove('placeholder-text');
             };
@@ -284,7 +280,6 @@
             };
             
             recognition.onend = () => {
-                // Autorestart if it stops randomly but the user didn't hit stop
                 if(isRecording) {
                     recognition.start(); 
                 }
@@ -303,23 +298,21 @@
                 isRecording = !isRecording;
             });
         } else {
-            // Fallback if the browser doesn't support Web Speech API
             recordBtn.style.display = 'none';
             transcriptionText.innerText = "Sorry, your current browser doesn't support the Web Speech API. Please try this demo in Google Chrome, Safari, or Microsoft Edge.";
         }
 
-        // Scroll Reveal Animation Logic
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.2 // Trigger when 20% of the element is visible
+            threshold: 0.2
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Only animate once
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
@@ -332,7 +325,6 @@
             observer.observe(el);
         });
 
-        // Summarize Button Logic
         const summarizeBtn = document.getElementById('trigger-summarize');
         const summaryOutput = document.getElementById('summary-output');
         
@@ -344,14 +336,12 @@
             const btnLoader = summarizeBtn.querySelector('.btn-loader');
 
             summarizeBtn.addEventListener('click', () => {
-                // Show loading states
                 btnText.classList.add('hidden');
                 btnLoader.classList.remove('hidden');
                 placeholderState.classList.add('hidden');
                 resultState.classList.add('hidden');
                 loadingState.classList.remove('hidden');
 
-                // Wait 2 seconds, then show result
                 setTimeout(() => {
                     btnText.classList.remove('hidden');
                     btnLoader.classList.add('hidden');
@@ -361,7 +351,6 @@
             });
         }
 
-        // Quiz Button Logic
         const quizBtn = document.getElementById('generate-quiz');
         const quizOutputCard = document.getElementById('quiz-output-card');
         const quizStartState = document.getElementById('quiz-start-state');

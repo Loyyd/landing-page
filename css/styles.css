@@ -1,4 +1,4 @@
-/* styles.css */
+
 :root {
     --primary-blue: #0A58CA;
     --light-blue: #E7F1FF;
@@ -123,7 +123,7 @@ footer {
     margin-top: auto;
 }
 
-/* Typography */
+
 h1, h2, h3, h4 {
     margin-bottom: 1rem;
     color: var(--dark-slate);
@@ -142,7 +142,7 @@ li {
     margin-bottom: 0.5rem;
 }
 
-/* Hero Section */
+
 .hero {
     text-align: center;
     padding: 5rem 2rem 4rem;
@@ -265,7 +265,7 @@ li {
     color: #5b6672;
 }
 
-/* Buttons */
+
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -296,7 +296,7 @@ li {
     color: var(--primary-blue);
 }
 
-/* Cards & Grid */
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -317,7 +317,7 @@ li {
     margin-bottom: 0.75rem;
 }
 
-/* Forms */
+
 .form-container {
     max-width: 500px;
     margin: 0 auto;
@@ -354,7 +354,7 @@ li {
     box-shadow: 0 0 0 3px rgba(10, 88, 202, 0.25);
 }
 
-/* Hero Interactive & Visuals */
+
 .hero-interactive {
     position: relative;
     margin-top: 1rem;
@@ -422,7 +422,7 @@ li {
     transform: translateX(100%) rotate(30deg);
 }
 
-/* Animations Triggered by Hovering the Button */
+
 .hero-interactive.is-hovered .macbook-wrapper {
     transform: translateY(-30px);
 }
@@ -458,7 +458,7 @@ li {
     50% { transform: translateY(-4px); }
 }
 
-/* Transcription Recording Demo Feature */
+
 .feature-recording {
     background-color: #1a1a1e;
     width: auto;
@@ -538,12 +538,12 @@ li {
 }
 
 .transcription-display .final-text {
-    color: #55555c; /* Older text is darker */
+    color: #55555c; 
     transition: color 0.5s;
 }
 
 .transcription-display .interim-text {
-    color: #ffffff; /* Newest text is highlighted white */
+    color: #ffffff; 
     background: transparent;
     padding: 0;
 }
@@ -606,12 +606,12 @@ li {
 }
 
 .record-btn-big.recording .record-inner {
-    border-radius: 8px; /* Square shape when recording */
+    border-radius: 8px;
     width: 24px;
     height: 24px;
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
     .recording-layout {
         flex-direction: column;
@@ -669,7 +669,7 @@ li {
     }
 }
 
-/* Summarization Feature */
+
 .feature-summarize {
     padding: 6rem 2rem;
     background-color: var(--white);
@@ -910,7 +910,7 @@ li {
     }
 }
 
-/* Quiz Feature */
+
 .feature-quiz {
     padding: 5rem 2rem 6rem;
     background: #1a1a1e;
@@ -1288,7 +1288,7 @@ li {
 }
 
 
-/* Leo added CSS */
+
 
 .container {
     max-width: 1180px;
@@ -1392,7 +1392,7 @@ li {
     color: #0f172a;
     border: 1px solid #cdd5df;
 }
-/* Table Styles */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -1677,7 +1677,7 @@ section {
     margin-top: 0.5rem;
 }
 
-/* Footer */
+
 
 #footer-layout {
     background: var(--dark-slate);
